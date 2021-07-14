@@ -1,0 +1,442 @@
+@import "../config";
+
+.service-header {
+    padding: 50px 0;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #586844;
+    text-align: center;
+    .wrapper {
+        width: 100%;
+    }
+
+}
+.h1 {
+    text-align: center;
+    @include caslon();
+    font-size: 54px;
+    text-transform: uppercase;
+    color: $black;
+    
+    @media (max-width: $screen-md) {
+        font-size: 40px;
+    }
+}
+.main-nav-service {
+    a {
+        color: $black;
+    }
+}
+.services-btn {
+    background-color: $black;
+    color: $white;
+    text-decoration: none;
+    padding: 20px 100px;
+    border-radius: 0;
+    border: none;
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    @include futura();
+    letter-spacing: 3px;
+    transform: translateX(-50%);
+    &:hover {
+        text-decoration: none;
+        color: $white;
+    }
+}
+
+.restavr {
+    display: flex;
+    height: 100vh;
+    position: relative;
+    .block-1, .block-2 {
+        display: flex;
+        flex-basis: 50%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .block-1 {
+        padding: 0 10%;
+        .restavr-block_title {
+            @include futura();
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 400;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .restavr-block_subtitle {
+            @include futura();
+            font-weight: 400;
+            font-size: 20px;
+            margin-bottom: 100px;
+            color: #586844;
+            letter-spacing: 2px;
+        }
+        .restavr-block_text {
+            line-height: 1.8;
+            @include helvetica();
+            color: #ADADAD;
+            letter-spacing: 2px;
+            position: relative;
+            img {
+                position: absolute;
+                &:first-child {
+                    top: -40px;
+                    left: -50px;
+                }
+                &:last-child {
+                    bottom: -30px;
+                    right: 0;
+                }
+            }
+        }
+    }
+    .block-2 {
+        background-color: #F6F5F4;
+        .restavr_img {
+            width: 60%;
+            text-align: center;
+            img {
+                width: 100%;
+            }
+            h3 {
+                text-align: right;
+                @include caslon();
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                margin-top: 5px;
+            }
+        }
+    }
+
+    @media (max-width: $screen-xs-max) {
+        margin-top: 20%;
+        flex-direction: column;
+        .block-1 {
+            padding: 5%;
+            margin-bottom: 100px;
+            .restavr-block_text {
+                padding: 0px 10px;
+                img {
+                    &:first-child {
+                        top: -50px;
+                        left: -25px;
+                    }
+                    &:last-child {
+                        bottom: -40px;
+                        right: -10px;
+                    }
+                }
+            }
+
+        }
+        .block-2 {
+            padding: 5%;
+            .restavr_img {
+                width: 90%;
+                position: relative;
+            }
+        }
+    }
+}
+
+.pirogravura {
+    height: 100vh;
+    display: flex;
+    position: relative;
+    .block-1, .block-2 {
+        display: flex;
+        flex-basis: 50%;
+        align-items: center;
+    }
+    .block-1 {
+        background-color: #F6F5F4;
+        .pirogravura_block {
+            margin: 0 auto;
+            .pirogravura_block_img {
+                img {
+                    &:first-child {
+                        width: 20%;
+                        position: absolute;
+                        top: 10%;
+                        left: 3%;
+                        z-index: 10;
+                        box-shadow: 0px 4px 10px rgba($color: #000000, $alpha: .1);
+                    }
+                    &:last-child {
+                        margin-left: 50px;
+                        width: 80%;
+                        z-index: 2;
+                        position: relative;
+                    }
+                }
+            }
+            h3 {
+                text-align: right;
+                margin-top: 20px;
+                @include caslon();
+                letter-spacing: 5px;
+            }
+        }
+    }
+    .block-2 {
+        .pirogravura_text {
+            width: 60%;
+            margin: 0 auto; 
+            @include helvetica();
+            color: #ADADAD;
+            letter-spacing: 1px;
+        }
+    }
+    @media (max-width: $screen-xs-max) {
+        margin-top: 10%;
+        padding-bottom: 10%;
+        flex-direction: column;
+        .block-1 {
+            padding: 0px 10px;
+            order: 1;
+            .pirogravura_block {
+                .pirogravura_block_img {
+                    display: flex;
+                    justify-content: center;
+                    img {
+                        position: relative;
+                        &:first-child {
+                            display: none;
+                        }
+                        &:last-child {
+                            width: 90%;
+                            margin-left: 0;
+                        }
+                    }
+                }
+                h3 {
+                    width: 95%;
+                }
+            }
+        }
+        .block-2 {
+            .pirogravura_text {
+                width: 90%;
+                padding: 0px 10px;
+            }
+        }
+    }
+}
+
+
+.restoration {
+    display: flex;
+    height: 100vh;
+    position: relative;
+    .block-1, .block-2 {
+        display: flex;
+        position: relative;
+        flex-basis: 50%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .block-1 {
+        background-color: #F1EFE8;
+    }
+    &_title {
+        position: relative;
+        &-title {
+            @include caslon();
+            font-size: 90px;
+            text-transform: uppercase;
+            color: $black;
+        }
+        &-subtitle {
+            position: absolute;
+            right: -5%;
+            bottom: -15%;
+            @include amiri();
+            font-size: 50px;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            color: #586844;
+        }
+    }
+    &-img {
+        width: 350px;
+        position: absolute;
+        top: -10%;
+    }
+    &-info {
+        margin-top: 100px;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        &_text {
+            @include helvetica();
+            font-size: 20px;
+            line-height: 1.4;
+        }
+        &_title {
+            @include amiri();
+            color: #586844;
+            font-size: 40px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        &_testemunhos {
+            @include futura();
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        &_author {
+            @include futura();
+            font-size: 16px;
+            letter-spacing: 4px;
+        }
+    }
+    @media (max-width: $screen-xs-max) {
+        flex-direction: column;
+        .block-1 {
+            padding: 60px 0;
+        }
+        .block-2 {
+            // padding: 50px 0;
+        }
+        &-img {
+            display: none;
+        }
+        &_title {
+            &-title {
+                @include caslon();
+                font-size: 50px;
+            }
+            &-subtitle {
+                font-size: 30px;
+            }
+        }
+        &-info {
+            margin-top: 10px;
+            padding: 30px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            &_text {
+                @include helvetica();
+                font-size: 20px;
+                line-height: 1.4;
+            }
+            &_title {
+                @include amiri();
+                color: #586844;
+                font-size: 40px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
+            &_testemunhos {
+                @include futura();
+                font-size: 20px;
+                text-transform: uppercase;
+                font-weight: bold;
+                letter-spacing: 2px;
+            }
+            &_author {
+                @include futura();
+                font-size: 16px;
+                letter-spacing: 4px;
+            }
+        }
+    }
+}
+.pyrography {
+    background-color: #CCB49D;
+    position: relative;
+    height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    &-title {
+        @include caslon();
+        font-size: 60px;
+        text-align: center;
+    }
+    &-block {
+        margin-top: 100px;
+        width: 100%;
+        position: relative;
+        height: 70vh;
+        &_toptext {
+            width: 25%;
+            position: absolute;
+            right: 15%;
+            top: 0%;
+            @include helvetica();
+            color: $black;
+        }
+        &_images {
+            position: relative;
+            top: 0%;
+            left: 30%;
+            &-1 {
+                position: absolute;
+                width: 500px;
+                z-index: 3;
+            }
+            &-2 {
+                position: absolute;
+                z-index: 9;
+                width: 350px;
+                margin-top: 200px;
+                margin-left: 350px;
+            }
+        }
+        &_bottomtext {
+            width: 25%;
+            position: absolute;
+            left: 5%;
+            bottom: 5%;
+            @include helvetica();
+            color: $black;
+        }
+    }
+    @media (max-width: $screen-xs-max) {
+        &-title {
+            font-size: 32px;
+        }
+        &-block {
+            margin-top: 0;
+            &_toptext {
+                position: relative;
+                width: 100%;
+                right: auto;
+                padding: 5px 10px;
+            }
+            &_images {
+                left: 0;
+                &-1 {
+                    position: relative;
+                    width: 100%;
+                    margin: 0;
+                }
+                &-2 {
+                    position: relative;
+                    width: 100%;
+                    margin: 0;
+                    display: none;
+                }
+            }
+            &_bottomtext {
+                position: relative;
+                width: 100%;
+                left: 0;
+                bottom: 0;
+                margin-top: 10px;
+                padding: 5px 10px;
+            }
+        }
+        
+    }
+}

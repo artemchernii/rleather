@@ -1,0 +1,163 @@
+@import '../config';
+@import 'product.scss';
+
+
+.products-header {
+    height: 100vh;
+    background-color:#BAB9A5;
+    position: relative;
+    display: flex;
+    align-items: center;
+    .h1 {
+        @include caslon();
+        font-size: 70px;
+        color: $black;
+    }
+
+    @media (max-width: $screen-md) {
+        .h1 {
+            font-size: 40px;
+        }
+    }
+}
+
+.products-main {
+    min-height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    &_list {
+        text-align: center;
+        position: relative;
+        &__unit {
+            margin: 40px 30px;
+            display: inline-block;
+            position: relative;
+            transition: all .25s ease;
+            .title {
+                font-size: 54px;
+                text-transform: uppercase;
+                @include caslon();
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                a {
+                    letter-spacing: 5px;
+                    color: $black;
+                    text-decoration: none;
+                    position: relative;
+                    z-index: 9;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        bottom: 10%;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background: transparent;
+                        transition: all .25s ease;
+                    }
+                    &:hover {
+                        &::before {
+                            background: $black;
+                        }
+                    }
+                }
+                i {
+                    margin-left: 25px;
+                    font-size: 10px;
+                }
+            }
+            .hiddenImg {
+                position: absolute;
+                width: 250px;
+                opacity: 0;
+                height: 0;
+                z-index: 10;
+                transition: all .4s ease;
+                &.hiddenImg_malas {
+                    width: 500px;
+                    top: -500%;
+                    left: 0%;
+                    z-index: 3;
+                }
+                &.hiddenImg_casa1 {
+                    width: 500px;
+                    top: -330%;
+                    left: 50%;
+                    z-index: 3;
+                }
+                &.hiddenImg_casa2 {
+                    width: 500px;
+                    top: -330%;
+                    left: -30%;
+                    z-index: 3;
+                }
+                &.hiddenImg_menu {
+                    width: 500px;
+                    top: -400%;
+                    left: 0%;
+                    z-index: 3;
+                }
+                &.hiddenImg_estojos {
+                    width: 650px;
+                    top: -200%;
+                    left: 0%;
+                    z-index: 3;
+                }
+                &.hiddenImg_viagem {
+                    width: 550px;
+                    top: -300%;
+                    left: 0%;
+                    z-index: 3;
+                }
+            }
+            &:hover {
+                .hiddenImg {
+                    opacity: 1;
+                    height: auto;
+                }
+            }
+        }
+    }
+    @media (max-width: $screen-md) {
+        padding: 30px 0;
+        &_list {
+            &__unit {
+                line-height: 1.2;
+            }
+        }
+    }
+}
+
+.cta-block_wrapper {
+    .products_link {
+        &:hover {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+    @media (max-width: $screen-md) {
+        .product_title {
+            line-height: 1.3;
+            margin-bottom: 50px;
+        }
+    }
+}
+.cta-products {
+    padding-top: 100px;
+}
+.cta-block_wrapper-products {
+    &::before {
+        background: url(../../images/dest/products/cta_products_bg.png);
+        background-position: bottom;
+        background-size: cover;
+    }
+    .products_link {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 5%;
+    }
+}
+

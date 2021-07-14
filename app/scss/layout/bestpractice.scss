@@ -1,0 +1,67 @@
+@import '../config';
+
+// .bestpractice-nav {
+//     ul {
+//         li {
+//             color: $white;
+//             a {
+//                 color: $white;
+//                 font-weight: 200;
+//             }   
+//         }
+//         button {
+//             color: $white !important;
+//             border: 1px solid $white !important;
+            
+//         }
+//     }
+// }
+.bestpractice-header {
+    height: 100vh;
+    position: relative;
+    background-color: #575A52;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     height: 100vh;
+    //     top: 0;
+    //     right: 0;
+    //     width: 25%;
+    //     z-index: 2;
+    //     background: url('../../images/dest/Terms/bestpractice_bg.png');
+    //     background-size: cover;
+    // }
+    .h1 {
+        z-index: 9;
+        @include caslon();
+        font-size: 50px;
+        color: $black;
+        text-transform: uppercase;
+    }
+    &_img {
+        max-width: 600px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -5%;
+        img {
+            width: 100%;
+        }
+    }
+}
+.bestpractice {
+    padding: 120px 0;
+    @include helvetica();
+    &-top {
+        padding: 20px 10px;
+        border-bottom: .5px solid lighten($color: #707070, $amount: 35);
+    }
+    &-bot {
+        margin-top: 20px;
+    }
+}

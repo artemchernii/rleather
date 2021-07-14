@@ -1,0 +1,135 @@
+@import "../../config";
+
+// footer
+.footer {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    background-color: $cream;
+    position: relative;
+    &-rights {
+        ul {
+            padding-left: 25px;
+            list-style-type: square;
+            li {
+                font-size: 32px;
+                letter-spacing: 1px;
+                @include caslon();
+            }
+        }
+        .rights {
+            font-size: 15px;
+            @include futura();
+            color: $dark-grey;
+        }
+    }
+    &-socials {
+        margin-left: 50px;
+        &__title {
+            @include caslon();
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+        .links {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            a {
+                text-decoration: none;
+                @include futura();
+                font-size: 15px;
+                color: $dark;
+                letter-spacing: 1px;
+                position: relative;
+                margin-bottom: 10px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 1px;
+                    width: 70px;
+                    background: $black;
+                }
+            }
+        }
+    }
+    &-terms {
+        text-align: right;
+        ul {
+            list-style: none;
+            li {
+                a {
+                    text-decoration: none;
+                    color: $dark;
+                    @include futura();
+                    font-weight: 200;
+                    font-size: 18px;
+                    position: relative;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        height: 1px;
+                        width: 100%;
+                        background: $black;
+                    }
+                }
+            }
+        }
+        p {
+            @include caslon();
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+    }
+    @media (max-width: $screen-sm) {
+        padding: 50px 10px;
+        &-rights {
+            ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                li {
+                    font-size: 32px;
+                }
+            }
+            text-align: center;
+        }
+        &-socials {
+            margin: 0;
+            padding: 20px 0;
+            .links {
+                text-align: center;
+                a {
+                    font-size: 20px;
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &-terms {
+            ul {
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                li {
+                    a {
+                        font-size: 20px;
+                    }
+                }
+            }
+            p {
+                margin-top: 15px;
+            }
+        }
+    }
+    @media (min-width: 2000px) {
+        
+    }
+    @media (max-width: $screen-xxl) {
+
+    }
+}
+// footer

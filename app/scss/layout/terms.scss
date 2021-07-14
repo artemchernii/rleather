@@ -1,0 +1,38 @@
+@import '../config';
+
+.terms-header {
+    height: 100vh;
+    position: relative;
+    // background: url('../../images/dest/Terms/terms_bg.png');
+    background-color: #E6DBCF;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .h1 {
+        @include caslon();
+        font-size: 50px;
+        color: $black;
+        text-transform: uppercase;
+    }
+    &_img {
+        max-width: 600px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -5%;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.terms {
+    padding: 120px 0;
+    @include helvetica();
+    &-rule {
+        padding: 20px 10px;
+        border-bottom: .5px solid lighten($color: #707070, $amount: 35);
+    }
+}

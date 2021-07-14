@@ -1,0 +1,49 @@
+@import '../config';
+
+
+.delivery-header {
+    height: 100vh;
+    position: relative;
+    background-color: #AE7A5E;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     height: 100vh;
+    //     bottom: -15%;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     width: 25%;
+    //     z-index: 2;
+    //     background: url('../../images/dest/Terms/delivery_bg.png');
+    // }
+    .h1 {
+        z-index: 9;
+        @include caslon();
+        font-size: 50px;
+        color: $black;
+        text-transform: uppercase;
+    }
+    &_img {
+        max-width: 600px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -5%;
+        img {
+            width: 100%;
+        }
+    }
+}
+.delivery {
+    padding: 120px 0;
+    @include helvetica();
+    &-rule {
+        padding: 20px 10px;
+        border-bottom: .5px solid lighten($color: #707070, $amount: 35);
+    }
+}

@@ -1,0 +1,171 @@
+@import '../config';
+
+.product {
+    padding: 120px 0;
+    position: relative;
+    &-nav {
+        position: fixed;
+        min-width: 450px;
+        &_list {
+            margin-bottom: 140px;
+            margin-top: 40px;
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                li {
+                    margin: 20px 0;
+                    a {
+                        text-decoration: none;
+                        @include caslon();
+                        text-transform: uppercase;
+                        font-size: 16px;
+                        color: $black;
+                        letter-spacing: 2px;
+                        line-height: 1.4;
+                        transition: all .25s ease;
+                        &:hover {
+                            color: $accent;
+                        }
+                    }
+                    .product-nav_list__active {
+                        @include caslon();
+                        font-size: 40px;
+                        // line-height: 3;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        letter-spacing: 5px;
+                        position: relative;
+                        z-index: 10;
+                        &:hover {
+                            color: $black;
+                        }
+                    }
+                }
+            }
+        }
+        &_create {
+            color: $white;
+            @include futura();
+            text-transform: uppercase;
+            background-color: $black;
+            padding: 15px 40px;
+            border-radius: 0;
+            font-weight: 200;
+            letter-spacing: 1px;
+            width: 80px;
+            transition: all .5s ease;
+            .span_start {
+                display: inline-block;
+            }
+            .span_end {
+                display: none;
+            }
+            &:hover {
+                text-decoration: none;
+                color: $white;
+            }
+        }
+        @media (max-width: $screen-xs-max) {
+            position: relative;
+            min-width: auto;
+            width: 100%;
+            padding: 0px 20px;
+        }
+    }
+    &-unit {
+        padding: 15px;
+        margin-top: 15px;
+        &_img {
+            img {
+                width: 100%;
+            }
+        }
+        &_details {
+            @include futura();
+            font-weight: 200;
+            margin-top: 5px;
+            letter-spacing: 2px;
+            display: flex;
+            justify-content: space-between;
+            .product_name {
+                color: $black;
+                text-transform: uppercase;
+                font-size: 13px;
+            }
+            .product_price {
+                color: #707070;
+                font-size: 13px;
+                letter-spacing: 1px;
+            }
+        }
+        &_color {
+            margin: 0;
+            display: flex;
+            &-1 {
+                // display: inline-block;
+                // background-color: #BEC8CA;
+                width: 15px;
+                height: 15px;
+                margin-right: 5px;
+            }
+            &-2 {
+                // display: inline-block;
+                // background-color: #C88424;
+                width: 15px;
+                height: 15px;
+                margin-right: 5px;
+            }
+        }
+        &_descr {
+            @include futura();
+            color: #707070;
+            font-size: 12px;
+            font-weight: 200;
+            
+        }
+        &_additional {
+            display: flex;
+            justify-content: space-between;
+            span {
+                color: #707070;
+                @include helvetica();
+                font-size: 12px;
+                margin-top: 2px;
+            }
+        }
+    }
+    &-pages_link {
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-between;
+        @include caslon();
+        text-transform: uppercase;
+        font-size: 14px;
+        a {
+            color: $black;
+        }
+    }
+}
+
+
+// @keyframes show {
+//     0% {
+//         display: none;
+//         opacity: 0;
+//     }
+//     100% {
+//         display: inline-block;
+//         opacity: 1;
+//     }
+// }
+// @keyframes hide {
+//     0% {
+//         display: inline-block;
+//         opacity: 1;
+//     }
+//     100% {
+//         display: none;
+//         opacity: 0;
+//     }
+// }
