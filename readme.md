@@ -9,10 +9,12 @@
 
 <h2>How to run the project</h2>
 
-<pre>git clone</pre>
 
 <ol>
 	<li>Clone from GitHub</li>
+	<pre>git clone</pre>
 	<li>Install Node Modules: <strong>npm i</strong></li>
+	<pre>npm install</pre>
 	<li>Run: <strong>gulp</strong></li>
+	<pre>gulp</pre>
 </ol>
